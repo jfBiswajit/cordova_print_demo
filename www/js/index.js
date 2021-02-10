@@ -21,6 +21,30 @@ function printNow() {
       function (data) {
         alert('Success');
         alert(data);
+        
+        BTPrinter.printText(
+          function (data) {
+            console.log('Success');
+            console.log(data);
+          },
+          function (err) {
+            console.log('Error');
+            console.log(err);
+          },
+          'This Text Comes From The Fucking Printer!'
+        );
+        
+        BTPrinter.disconnect(
+          function (data) {
+            console.log('Success');
+            console.log(data);
+          },
+          function (err) {
+            console.log('Error');
+            console.log(err);
+          },
+          'RPP300'
+        );
       },
       function (err) {
         alert('Error');
@@ -28,5 +52,7 @@ function printNow() {
       },
       'RPP300'
     )
+    
+    
   );
 }
