@@ -8,19 +8,19 @@ function onDeviceReady() {
 
 function printNow() {
   BTPrinter.list(
-    function (data) {
+    function () {
       BTPrinter.connect(
-        function (data) {
+        function () {
           BTPrinter.printText(
-            function (data) {
+            function () {
               BTPrinter.disconnect(
-                function (data) {},
+                function () {},
                 function (err) {},
-                'PrinterName'
+                'RPP300'
               );
             },
             function (err) {},
-            'String to Print'
+            `Hi there!`
           );
         },
         function (err) {},
