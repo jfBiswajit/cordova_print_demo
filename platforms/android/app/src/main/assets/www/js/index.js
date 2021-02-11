@@ -11,12 +11,12 @@ function printNow() {
     if (isConnected === true) {
       BTPrinter.printBase64(
         function (data) {
-          alert('Success');
-          alert(data);
+          // alert('Success');
+          // alert(data);
         },
         function (err) {
-          alert('Error');
-          alert(err);
+          // alert('Error');
+          // alert(err);
         },
         'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAQAAAAnOwc2AAAAEUlEQVR42mNk+M+AARiHsiAAcCIKAYwFoQ8AAAAASUVORK5CYII=',
         '0'
@@ -25,19 +25,19 @@ function printNow() {
       BTPrinter.connect(
         function (data) {},
         function (err) {
-          alert(err);
+          // alert(err);
         },
         'RPP300'
       );
 
       BTPrinter.printBase64(
         function (data) {
-          alert('Success');
-          alert(data);
+          // alert('Success');
+          // alert(data);
         },
         function (err) {
-          alert('Error');
-          alert(err);
+          // alert('Error');
+          // alert(err);
         },
         'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAQAAAAnOwc2AAAAEUlEQVR42mNk+M+AARiHsiAAcCIKAYwFoQ8AAAAASUVORK5CYII=',
         '0'
@@ -47,12 +47,12 @@ function printNow() {
   
   BTPrinter.disconnect(
     function (data) {
-      alert('Success');
-      alert(data);
+      // alert('Success');
+      // alert(data);
     },
     function (err) {
-      alert('Error');
-      alert(err);
+      // alert('Error');
+      // alert(err);
     },
     'RPP300'
   );
