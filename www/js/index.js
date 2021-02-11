@@ -7,26 +7,11 @@ function onDeviceReady() {
 }
 
 function printNow() {
-  BTPrinter.list(
-    function () {
-      BTPrinter.connect(
-        function () {
-          BTPrinter.printBase64(
-            function (data) {
-              BTPrinter.disconnect(
-                function () {},
-                function (err) {},
-                'RPP300'
-              );
-            },
-            function (err) {},
-            'Image Base64 String'
-          );
-        },
-        function (err) { alert('Err: connect')},
-        'RPP300'
-      );
-    },
-    function (err) {alert('Err: list')}
-  );
+  BTPrinter.connected(function (isConnected) {
+    if (isConnected === true) {
+      alert('connected');
+    } else {
+      alert('not connected');
+    }
+  });
 }
