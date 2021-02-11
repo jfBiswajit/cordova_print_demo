@@ -1,3 +1,5 @@
 cordova plugin add https://github.com/CesarBalzer/Cordova-Plugin-BTPrinter.git
 
 cordova plugin add cordova-pdf-generator
+
+https://www.npmjs.com/package/cordova-pdf-generator
