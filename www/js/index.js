@@ -9,22 +9,51 @@ function onDeviceReady() {
 function printNow() {
   BTPrinter.connected(function (isConnected) {
     if (isConnected === true) {
-      BTPrinter.printText(
-        function (data) {},
-        function (err) {},
-        'String to Print'
-      );
+      BTPrinter.printBase64(
+        function (data) {
+          alert('Success');
+          alert(data);
+        },
+        function (err) {
+          alert('Error');
+          alert(err);
+        },
+        'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAQAAAAnOwc2AAAAEUlEQVR42mNk+M+AARiHsiAAcCIKAYwFoQ8AAAAASUVORK5CYII=',
+        '0'
+      ); //base64 string, align
     } else {
       BTPrinter.connect(
         function (data) {},
-        function (err) {},
+        function (err) {
+          alert(err);
+        },
         'RPP300'
       );
-      BTPrinter.printText(
-        function (data) {},
-        function (err) {},
-        'String to Print'
-      );
+
+      BTPrinter.printBase64(
+        function (data) {
+          alert('Success');
+          alert(data);
+        },
+        function (err) {
+          alert('Error');
+          alert(err);
+        },
+        'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAQAAAAnOwc2AAAAEUlEQVR42mNk+M+AARiHsiAAcCIKAYwFoQ8AAAAASUVORK5CYII=',
+        '0'
+      ); //base64 string, align
     }
   });
+  
+  BTPrinter.disconnect(
+    function (data) {
+      alert('Success');
+      alert(data);
+    },
+    function (err) {
+      alert('Error');
+      alert(err);
+    },
+    'RPP300'
+  );
 }

@@ -8,11 +8,52 @@ function onDeviceReady() {
 
 function printNow() {
   BTPrinter.connected(function (isConnected) {
-    alert(JSON.stringify(isConnected));
     if (isConnected === true) {
-      alert('connected');
+      BTPrinter.printBase64(
+        function (data) {
+          alert('Success');
+          alert(data);
+        },
+        function (err) {
+          alert('Error');
+          alert(err);
+        },
+        'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAQAAAAnOwc2AAAAEUlEQVR42mNk+M+AARiHsiAAcCIKAYwFoQ8AAAAASUVORK5CYII=',
+        '0'
+      ); //base64 string, align
     } else {
-      alert('not connected');
+      BTPrinter.connect(
+        function (data) {},
+        function (err) {
+          alert(err);
+        },
+        'RPP300'
+      );
+
+      BTPrinter.printBase64(
+        function (data) {
+          alert('Success');
+          alert(data);
+        },
+        function (err) {
+          alert('Error');
+          alert(err);
+        },
+        'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAQAAAAnOwc2AAAAEUlEQVR42mNk+M+AARiHsiAAcCIKAYwFoQ8AAAAASUVORK5CYII=',
+        '0'
+      ); //base64 string, align
     }
   });
+  
+  BTPrinter.disconnect(
+    function (data) {
+      alert('Success');
+      alert(data);
+    },
+    function (err) {
+      alert('Error');
+      alert(err);
+    },
+    'RPP300'
+  );
 }
