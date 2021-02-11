@@ -1,16 +1,16 @@
 {
-  "cordova-plugin-bluetooth-printer": {
-    "source": {
-      "type": "registry",
-      "id": "https://github.com/marcelo-michels/Cordova-Plugin-Bluetooth-Printer.git"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
   "cordova-plugin-whitelist": {
     "source": {
       "type": "registry",
       "id": "cordova-plugin-whitelist@^1.3.4"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-btprinter": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/CesarBalzer/Cordova-Plugin-BTPrinter.git"
     },
     "is_top_level": true,
     "variables": {}

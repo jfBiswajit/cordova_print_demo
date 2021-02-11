@@ -7,10 +7,10 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-bluetooth-printer": {
+    "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.example.hello"
     },
-    "cordova-plugin-whitelist": {
+    "cordova-plugin-btprinter": {
       "PACKAGE_NAME": "com.example.hello"
     }
   },

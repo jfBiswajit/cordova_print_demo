@@ -1,0 +1,1 @@
+cordova plugin add https://github.com/CesarBalzer/Cordova-Plugin-BTPrinter.git

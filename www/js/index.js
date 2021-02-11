@@ -11,27 +11,22 @@ function printNow() {
     function () {
       BTPrinter.connect(
         function () {
-          BTPrinter.printText(
-            function (data) {},
+          BTPrinter.printBase64(
+            function (data) {
+              BTPrinter.disconnect(
+                function () {},
+                function (err) {},
+                'RPP300'
+              );
+            },
             function (err) {},
-            'print one'
-          );
-
-          BTPrinter.printText(
-            function (data) {},
-            function (err) {},
-            'print two'
-          );
-          BTPrinter.disconnect(
-            function () {},
-            function (err) {},
-            'RPP300'
+            'Image Base64 String'
           );
         },
-        function (err) {'Err: connect'},
+        function (err) { alert('Err: connect')},
         'RPP300'
       );
     },
-    function (err) {'Err: list'}
+    function (err) {alert('Err: list')}
   );
 }

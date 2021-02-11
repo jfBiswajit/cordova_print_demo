@@ -7,10 +7,19 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "clobbers": [
         "BTPrinter"
       ]
+    },
+    {
+      "id": "cordova-plugin-btprinter.BluetoothPrinter",
+      "file": "plugins/cordova-plugin-btprinter/www/BluetoothPrinter.js",
+      "pluginId": "cordova-plugin-btprinter",
+      "clobbers": [
+        "BTPrinter"
+      ]
     }
   ];
   module.exports.metadata = {
     "cordova-plugin-bluetooth-printer": "0.0.1-dev",
-    "cordova-plugin-whitelist": "1.3.4"
+    "cordova-plugin-whitelist": "1.3.4",
+    "cordova-plugin-btprinter": "0.1.0-dev"
   };
 });
