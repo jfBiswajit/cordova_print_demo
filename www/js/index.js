@@ -9,9 +9,22 @@ function onDeviceReady() {
 function printNow() {
   BTPrinter.connected(function (isConnected) {
     if (isConnected === true) {
-      alert('connected');
+      BTPrinter.printText(
+        function (data) {},
+        function (err) {},
+        'String to Print'
+      );
     } else {
-      alert('not connected');
+      BTPrinter.connect(
+        function (data) {},
+        function (err) {},
+        'RPP300'
+      );
+      BTPrinter.printText(
+        function (data) {},
+        function (err) {},
+        'String to Print'
+      );
     }
   });
 }
